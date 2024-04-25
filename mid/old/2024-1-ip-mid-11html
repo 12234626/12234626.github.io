@@ -3,14 +3,14 @@
 <html>
     <head>
         <script>
+            /* //cors 우회 프록시 서버 URL
             const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
             // 수집 대상 URL
-            const url = 'https://www.inha.ac.kr/kr/946/subview.do';
+            const url = 'https://ko.wikipedia.org/wiki/%ED%8F%AC%ED%84%B8:%EC%9A%94%EC%A6%98_%ED%99%94%EC%A0%9C';
             // 크롤링 함수
             async function crawl(url) {
                 // 수집중인 URL
                 const decodedUrl = decodeURI(url);
-                
                 console.log(`크롤링 ${decodedUrl} ...`);
                 // URL에서 데이터를 가져옴
                 const response = await fetch(proxyUrl + url, {
@@ -32,16 +32,18 @@
                 const contentWithSingleNewlines = content.replace(/\n{2,}/g, '\n');
                 console.log(`Title: ${title}\nContent: ${contentWithSingleNewlines}\n`);
             }
-
-            console.log("asdads");
-
+            // 실행
             crawl(url)
-            .then(() => {
-                console.log('데이터 수집 완료');
-            })
-            .catch(err => console.error(err));
+                .then(() => {
+                    console.log('데이터 수집 완료');
+                })
+                .catch(err => console.error(err)); */
 
-            console.log("asdads");
+                document.add
+                fetch("https://rss.blog.naver.com/toyou101")
+                .then((response) => response.text())
+                .then((data) => console.log(data))
+
 
         </script>
     </head>
